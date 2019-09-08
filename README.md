@@ -14,7 +14,7 @@ more .bashrc
 echo $PATH
 esearch -db pubmed -query "Smad1" | efilter -query "osteogenic differentiation" | efetch -format abstract  > Smad1_1.txt
 ls -la
-vi Smad1_1.txt
+vi Smad1_1.txt (within vi :%s/\n//g)
 pip install wordcloud --user
 scp mask2.png psehgal@trgn.usc.edu:
 wordcloud_cli --text Smad1_1.txt --imagefile wordcloudfinal.png --mask mask2.png --contour_width 3 --contour_color blue --background white
